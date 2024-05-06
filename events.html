@@ -11,13 +11,26 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img id="logo" src="img/PeppiesLogo.png" alt="Peppies" /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html"
+          ><img id="logo" src="img/PeppiesLogo.png" alt="Peppies"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -51,9 +64,27 @@
     <h1 class="Header">Find events nearby here!</h1>
     <div class="search-form-container">
       <form action="search_results.php" method="GET" class="form-style">
-        <input type="text" id="area" name="area" placeholder="Lokation" class="input-text-date-people" />
-        <input type="date" id="date" name="date" class="input-text-date-people" />
-        <input type="number" id="people" name="people" min="1" placeholder="Maks personer" class="input-text-date-people" />
+        <input
+          type="text"
+          id="area"
+          name="area"
+          placeholder="Lokation"
+          class="input-text-date-people"
+        />
+        <input
+          type="date"
+          id="date"
+          name="date"
+          class="input-text-date-people"
+        />
+        <input
+          type="number"
+          id="people"
+          name="people"
+          min="1"
+          placeholder="Maks personer"
+          class="input-text-date-people"
+        />
         <a href="events.html" class="submit-button">Søg</a>
       </form>
     </div>
@@ -61,37 +92,121 @@
     <div class="filter-box">
       <form>
         <label for="event-name">Name of event:</label>
-        <input type="text" id="event-name" name="event-name" placeholder="Enter event name" /><br />
+        <input
+          type="text"
+          id="event-name"
+          name="event-name"
+          placeholder="Enter event name"
+        /><br />
 
         <label for="price-min">Price range:</label>
-        <input type="number" id="price-min" name="price-min" placeholder="Min price" />
-        <input type="number" id="price-max" name="price-max" placeholder="Max price" /><br />
+        <input
+          type="number"
+          id="price-min"
+          name="price-min"
+          placeholder="Min price"
+        />
+        <input
+          type="number"
+          id="price-max"
+          name="price-max"
+          placeholder="Max price"
+        /><br />
 
         <label for="near-km">Near (km):</label>
-        <input type="number" id="near-km" name="near-km" placeholder="Distance in km" /><br />
+        <input
+          type="number"
+          id="near-km"
+          name="near-km"
+          placeholder="Distance in km"
+        /><br />
 
         <fieldset>
           <label>Outdoors:</label>
-          <label><input type="checkbox" id="outdoors_yes" name="outdoors" value="yes" onclick="toggleCheckbox(this, 'outdoors_no')" />Yes</label>
-          <label><input type="checkbox" id="outdoors_no" name="outdoors" value="no" onclick="toggleCheckbox(this, 'outdoors_yes')" />No</label>
+          <label
+            ><input
+              type="checkbox"
+              id="outdoors_yes"
+              name="outdoors"
+              value="yes"
+              onclick="toggleCheckbox(this, 'outdoors_no')"
+            />Yes</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              id="outdoors_no"
+              name="outdoors"
+              value="no"
+              onclick="toggleCheckbox(this, 'outdoors_yes')"
+            />No</label
+          >
         </fieldset>
 
         <fieldset>
           <label>Come to you:</label>
-          <label><input type="checkbox" id="come-to-you_yes" name="come-to-you" value="yes" onclick="toggleCheckbox(this, 'come-to-you_no')" />Yes</label>
-          <label><input type="checkbox" id="come-to-you_no" name="come-to-you" value="no" onclick="toggleCheckbox(this, 'come-to-you_yes')" />No</label>
+          <label
+            ><input
+              type="checkbox"
+              id="come-to-you_yes"
+              name="come-to-you"
+              value="yes"
+              onclick="toggleCheckbox(this, 'come-to-you_no')"
+            />Yes</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              id="come-to-you_no"
+              name="come-to-you"
+              value="no"
+              onclick="toggleCheckbox(this, 'come-to-you_yes')"
+            />No</label
+          >
         </fieldset>
 
         <fieldset>
           <label>Bookable:</label>
-          <label><input type="checkbox" id="bookable_yes" name="bookable" value="yes" onclick="toggleCheckbox(this, 'bookable_no')" />Yes</label>
-          <label><input type="checkbox" id="bookable_no" name="bookable" value="no" onclick="toggleCheckbox(this, 'bookable_yes')" />No</label>
+          <label
+            ><input
+              type="checkbox"
+              id="bookable_yes"
+              name="bookable"
+              value="yes"
+              onclick="toggleCheckbox(this, 'bookable_no')"
+            />Yes</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              id="bookable_no"
+              name="bookable"
+              value="no"
+              onclick="toggleCheckbox(this, 'bookable_yes')"
+            />No</label
+          >
         </fieldset>
 
         <fieldset>
           <label>Participable:</label>
-          <label><input type="checkbox" id="participable_yes" name="participable" value="yes" onclick="toggleCheckbox(this, 'participable_no')" />Yes</label>
-          <label><input type="checkbox" id="participable_no" name="participable" value="no" onclick="toggleCheckbox(this, 'participable_yes')" />No</label>
+          <label
+            ><input
+              type="checkbox"
+              id="participable_yes"
+              name="participable"
+              value="yes"
+              onclick="toggleCheckbox(this, 'participable_no')"
+            />Yes</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              id="participable_no"
+              name="participable"
+              value="no"
+              onclick="toggleCheckbox(this, 'participable_yes')"
+            />No</label
+          >
         </fieldset>
 
         <input type="submit" value="Apply Filters" />
@@ -105,10 +220,17 @@
           <p class="event-card-info">Horsens - Banegårdsgade 02</p>
           <p class="event-card-info">Indoors</p>
           <p class="event-card-info">20 people</p>
-          <p class="event-card-info">A small description talking a little about the event perhabs</p>
+          <p class="event-card-info">
+            A small description talking a little about the event perhaps
+          </p>
           <p class="event-card-price">Free</p>
         </div>
-        <a href="#" class="event-card-button">See more</a>
+        <a
+          href="print_event_card.html?imageUrl=img/BirdEvent.png"
+          target="_blank"
+          class="event-card-button"
+          >See more
+        </a>
       </div>
     </div>
     <div class="event-card">
@@ -119,10 +241,17 @@
           <p class="event-card-info">Horsens - Banegårdsgade 02</p>
           <p class="event-card-info">Indoors</p>
           <p class="event-card-info">20 people</p>
-          <p class="event-card-info">A small description talking a little about the event perhabs</p>
+          <p class="event-card-info">
+            A small description talking a little about the event perhaps
+          </p>
           <p class="event-card-price">Free</p>
         </div>
-        <a href="#" class="event-card-button">See more</a>
+        <a
+          href="print_event_card.html?imageUrl=img/ConsertEvent.png"
+          target="_blank"
+          class="event-card-button"
+          >See more
+        </a>
       </div>
     </div>
     <div class="event-card">
@@ -133,10 +262,17 @@
           <p class="event-card-info">Horsens - Banegårdsgade 02</p>
           <p class="event-card-info">Indoors</p>
           <p class="event-card-info">20 people</p>
-          <p class="event-card-info">A small description talking a little about the event perhabs</p>
+          <p class="event-card-info">
+            A small description talking a little about the event perhaps
+          </p>
           <p class="event-card-price">Free</p>
         </div>
-        <a href="#" class="event-card-button">See more</a>
+        <a
+          href="print_event_card.html?imageUrl=img/LiveMusicEvent.png"
+          target="_blank"
+          class="event-card-button"
+          >See more
+        </a>
       </div>
     </div>
     <div class="event-card">
@@ -147,10 +283,17 @@
           <p class="event-card-info">Horsens - Banegårdsgade 02</p>
           <p class="event-card-info">Indoors</p>
           <p class="event-card-info">20 people</p>
-          <p class="event-card-info">A small description talking a little about the event perhabs</p>
+          <p class="event-card-info">
+            A small description talking a little about the event perhaps
+          </p>
           <p class="event-card-price">Free</p>
         </div>
-        <a href="#" class="event-card-button">See more</a>
+        <a
+          href="print_event_card.html?imageUrl=img/TheaterEvent.png"
+          target="_blank"
+          class="event-card-button"
+          >See more
+        </a>
       </div>
     </div>
 
