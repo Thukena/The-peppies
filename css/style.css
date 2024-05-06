@@ -146,20 +146,25 @@ body a {
 
 .filter-box fieldset {
   display: flex;
-  justify-content: space-between; /* Distributes space between elements */
-  align-items: center; /* Aligns items vertically */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .filter-box fieldset > label:first-child {
-  flex-grow: 1; /* Allows the first label to take up more space, pushing the checkbox labels to the right */
+  flex-grow: 1;
 }
 
 .filter-box fieldset > div {
-  display: flex; /* Aligns the 'Yes' and 'No' checkboxes horizontally */
+  display: flex;
 }
 
 .filter-box fieldset label {
   margin-right: 10px;
+}
+
+/* PRINT EVENT CARD */
+.participate-button {
+  margin: auto;
 }
 
 /* NAVBAR */

@@ -15,35 +15,39 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css"
     />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-      }
-      button {
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #0056b3;
-      }
 
+    <style>
       @media print {
         nav,
         footer,
         #logo,
-        button {
+        .navbar,
+        .footerCol,
+        .nav-item,
+        p,
+        h2,
+        .container-fluid,
+        .event-card-button {
           display: none;
+        }
+
+        .event-card {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 99vh;
+          max-width: none;
+          max-height: none;
+        }
+
+        .event-card-content {
+          display: none;
+        }
+
+        .event-card img {
+          width: 100%;
+          height: 99vh;
+          object-fit: cover;
         }
       }
     </style>
@@ -83,23 +87,36 @@
               <a class="nav-link active" href="">CONTACT</a>
             </li>
           </ul>
-
           <ul class="navbar-nav navPeppies">
-            <li class="nav-item">
-              <h3>The Peppies</h3>
-            </li>
+            <li class="nav-item"><h3>The Peppies</h3></li>
           </ul>
         </div>
       </div>
     </nav>
-    <button onclick="window.print()">Print Event Card</button>
+
+    <div class="event-card">
+      <img id="eventImage" src="" alt="Event Card Image" />
+      <div class="event-card-content">
+        <h2 class="event-card-title">Lær dine lokale fugle at kende</h2>
+        <p class="event-card-info">Horsens - Banegårdsgade 02</p>
+        <p class="event-card-info">Indoors</p>
+        <p class="event-card-info">20 people</p>
+        <p class="event-card-info">
+          A small description talking a little about the event perhaps
+        </p>
+        <p class="event-card-price">Free</p>
+        <button class="event-card-button" onclick="window.print()">
+          Print Event Card
+        </button>
+        <button class="event-card-button">Participate</button>
+      </div>
+    </div>
+
     <br /><br />
-    <img id="eventImage" src="" alt="Event Card Image" />
 
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const imageUrl = urlParams.get("imageUrl");
-
       document.getElementById("eventImage").src = imageUrl;
     </script>
 
@@ -114,7 +131,6 @@
             <p></p>
             <p class="contactInfoText">Amaliegade 23</p>
           </div>
-
           <div class="col-sm-4 footerCol">
             <h4>Follow Us</h4>
             <div>
@@ -127,20 +143,11 @@
               <a href=""><i class="bi bi-twitter"></i></a>
             </di>
           </div>
-
           <div class="col-sm-3 footerCol">
             <h4>Info</h4>
-            <a href="">
-              <p>Sign up for our newsletter</p>
-            </a>
-
-            <a href="">
-              <p>Try out our app</p>
-            </a>
-
-            <a href="">
-              <p>Help us improve our site</p>
-            </a>
+            <a href=""><p>Sign up for our newsletter</p></a>
+            <a href=""><p>Try out our app</p></a>
+            <a href=""><p>Help us improve our site</p></a>
           </div>
         </div>
       </div>
