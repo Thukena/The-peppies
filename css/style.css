@@ -417,8 +417,8 @@ h5 {
   display: block;
 }
 .recipe-img {
-  height: 15rem;
-  border-radius: var(--border-radius);
+  width: 100%;
+  height: auto;
   margin-bottom: 1rem;
 }
 .recipe h5 {
